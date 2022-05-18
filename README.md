@@ -101,10 +101,10 @@ composer install
         }
     -   Payload:
         {
-            "name": "Jack Sparrow",
-            "email": "jack@example.com",
-            "password": "password",
-            "password_confirmation": "password"
+            "name": "Md Sami",
+            "email": "mdsami@example.com",
+            "password": "123456",
+            "password_confirmation": "123456"
         }
 8.  Get personal **access_token** along with **refresh_token** for the User that was created in Step 7 by making a POST request:
     -   Url: http://apigateway.test/oauth/tokens
