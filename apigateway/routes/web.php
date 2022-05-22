@@ -40,6 +40,8 @@ $router->group(['middleware' => 'client.credentials'], function () use ($router)
     $router->get('users/{user}', ['as' => 'users.show', 'uses' => 'UserController@show']);
     $router->put('users/{user}', ['as' => 'users.update', 'uses' => 'UserController@update']);
     $router->delete('users/{user}', ['as' => 'users.destroy', 'uses' => 'UserController@destroy']);
+
+   
 });
 
 
