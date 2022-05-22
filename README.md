@@ -1,6 +1,6 @@
 # Lumen Microservices
 <p align="center">
-  <a href="https://lumen.laravel.com/" alt="Built with: Lumen v8.3.4)">
+  <a href="https://lumen.laravel.com/" alt="Built with: Lumen v8.3.4">
     <img src="https://badgen.net/badge/Built%20with/Lumenv8.3.4)/F4645F" />
   </a>
   <a href="https://www.php.net/downloads.php" alt="Powered by: PHP v8.0">
