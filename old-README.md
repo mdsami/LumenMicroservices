@@ -64,11 +64,84 @@ composer install
         ```
 
 
-4.  Copy the **Password grant client Id** and 
-**Client Secret** from the third Terminal 
+4.  Copy the **Password grant client Id** and **Client Secret** from the third Terminal 
 instance and make a POST request using POSTMAN to fetch the **access_token**:
 
-
+    -   Url: http://apigateway.test/oauth/token
+					
+    -   Headers:
+        {
+            "Accept": "application/json"
+            "Content-Type": "application/json"
+        }
+    -   Payload example:
+        {
+            "grant_type": "client_credentials",
+            "client_id": 2,
+            "client_secret": "B7K4zIlqygcmYOp73VhLmFGx9fcs5gAVELQZvGwy",
+            "scope": "*"
+            
+        }
+5.  The returned token can be used to access any route on **"apigateway"** and will be as follows: 
+    -   {
+            "token_type": "Bearer",
+            "expires_in": 31536000,
+            "access_token": "returnedToken"
+        }
+6. Test the **access_token** by making a GET request using Postman:
+    -   Url: http://apigateway.test/authors
+    -   Authorization Type:
+        {
+            "Bearer Token": "returnedToken"
+        }
+7.  Create a new User using the **access_token** created in step 5 by making a POST request: 					
+    -   Url: http://apigateway.test/users
+    -   Authorization Type:
+        {
+            "Bearer Token": "returnedToken"
+        }
+    -   Headers:
+        {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    -   Payload:
+        {
+            "name": "Md Sami",
+            "email": "mdsami@example.com",
+            "password": "123456",
+            "password_confirmation": "123456"
+        }
+8.  Get personal **access_token** along with **refresh_token** for the User that was created in Step 7 by making a POST request:
+    -   Url: http://apigateway.test/oauth/tokens
+    -   Headers:
+        {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    -   Payload:
+        {
+            "grant_type": "password",
+            "client_id": 2,
+            "client_secret": "B7K4zIlqygcmYOp73VhLmFGx9fcs5gAVELQZvGwy",
+            "scope": "*",
+            "username": "mdsami@example.com",
+            "password": "123456"
+        }    
+9.  The returned response for Step 8 is as follows:
+    -   {
+            "token_type": "Bearer",
+            "expires_in": 31536000,
+            "access_token": "userAccessToken",
+            "refresh_token": "userRefreshToken"
+        }
+10. Use the User's **access_token** returned in Step 9 to make any GET, POST, PUT, DELETE request on **"authorapi"** or **"books_api"**: 
+    -   Request: GET
+    -   Url: http://apigateway.test/users
+    -   Authorization Type:
+        {
+            "Bearer Token": "userAccessToken"
+        }
 
 
 # API Docs
