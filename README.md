@@ -1,10 +1,10 @@
 # Lumen Microservices
 <p align="center">
-  <a href="https://lumen.laravel.com/" alt="Built with: Lumen v7.2.0">
-    <img src="https://badgen.net/badge/Built%20with/Lumen%20v7.2/F4645F" />
+  <a href="https://lumen.laravel.com/" alt="Built with: Lumen v8.3.4)">
+    <img src="https://badgen.net/badge/Built%20with/Lumenv8.3.4)/F4645F" />
   </a>
-  <a href="https://www.php.net/downloads.php" alt="Powered by: PHP v7.4.4">
-    <img src="https://badgen.net/badge/Powered%20by/PHP%20v7.4.4/8892BF" />
+  <a href="https://www.php.net/downloads.php" alt="Powered by: PHP v8.0">
+    <img src="https://badgen.net/badge/Powered%20by/PHPv8.0/8892BF" />
   </a>
 </p>
 
@@ -59,8 +59,14 @@ composer install
     -   Open the sixth Terminal and navigate to the root directory of **"apigateway"** and run the following command:
         ```bash
         php -S localhost:8002 -t public
+
+
         ```
-4.  Copy the **Password grant client Id** and **Client Secret** from the third Terminal instance and make a POST request using POSTMAN to fetch the **access_token**:
+
+
+4.  Copy the **Password grant client Id** and **Client Secret** from the third Terminal 
+instance and make a POST request using POSTMAN to fetch the **access_token**:
+
     -   Url: http://apigateway.test/oauth/token
 					
     -   Headers:
@@ -136,3 +142,13 @@ composer install
         {
             "Bearer Token": "userAccessToken"
         }
+
+
+# API Docs
+
+API docs are available here: https://documenter.getpostman.com/view/2791867/UyxojQ8M
+
+# Postman 
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/45f9877d204f6c9cca3c=)
+
