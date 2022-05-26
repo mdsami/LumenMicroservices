@@ -16,14 +16,14 @@
 ```bash
 composer install
 ``` 
-4.  Rename the **".env.example"** file in the root directory to **".env"** for **"apigateway"**, **"authorapi"** and **"books_api"**.
+4.  Rename the **".env.example"** file in the root directory to **".env"** for **"apigateway"**, **"authorapi"** and **"bookapi"**.
 5.  Generate 3 application keys using [Random string generator](http://www.unit-conversion.info/texttools/random-string-generator/):
     -   Change the **Number of Strings to 3**, **Length to 32 characters** and click **Generate**. 
-    -   Copy the 3 keys from Output and initialize the **APP_KEY=** inside the **".env"** files for **"apigateway"**, **"authorapi"** and **"books_api"**.
+    -   Copy the 3 keys from Output and initialize the **APP_KEY=** inside the **".env"** files for **"apigateway"**, **"authorapi"** and **"booksapi"**.
 6. Generate 2 additional keys using [Random string generator](http://www.unit-conversion.info/texttools/random-string-generator/):
     -   Change the **Number of Strings to 2**, **Length to 32 characters** and click **Generate**.
     -   Copy the first key from Output and initialize the **AUTHORS_SERVICE_SECRET=** inside the **".env"** file for **"apigateway"** and also replace the **ACCEPTED_SECRETS=** with the copied key for **"authorapi"**.
-    -   Copy the second key from Output and initialize the **BOOKS_SERVICE_SECRET=** inside the **".env"** file for **"apigateway"** and also replace the **ACCEPTED_SECRETS=** with the copied key for **"books_api"**.
+    -   Copy the second key from Output and initialize the **BOOKS_SERVICE_SECRET=** inside the **".env"** file for **"apigateway"** and also replace the **ACCEPTED_SECRETS=** with the copied key for **"booksapi"**.
 11. Create the database file for **MySql**: 
     -   create a file database  **"apigateway"** .
     -   create a file database   **"authorapi"** .
