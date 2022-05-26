@@ -47,12 +47,12 @@ composer install
         php artisan passport:install
         ``` 
 2.  The **"php artisan passport:install"** command creates two clients in the **"apigateway"** database table 'oauth_clients' **Personal access client** and **Password grant client** which is to be used to get the access token for the users.
-3.  Run three servers, each for **"authorapi"**, **"books_api"** and **"apigateway"**:
+3.  Run three servers, each for **"authorapi"**, **"bookapi"** and **"apigateway"**:
     -   Open the fourth Terminal and navigate to the root directory of **"authorapi"** and run the following command:
         ```bash
         php -S localhost:8000 -t public
         ``` 
-    -   Open the fifth Terminal and navigate to the root directory of **"books_api"** and run the following command:
+    -   Open the fifth Terminal and navigate to the root directory of **"bookapi"** and run the following command:
         ```bash
         php -S localhost:8001 -t public
         ```
